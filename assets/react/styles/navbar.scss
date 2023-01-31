@@ -1,0 +1,97 @@
+// .NavList{
+//   background-color: #20232a;
+//   padding: 0px;
+//   >li{
+//     display:inline-block;
+//     list-style: none;
+//     text-align: center;
+//     font-family: sans-serif;
+//     >a{
+//       display:inline-block;
+//       color: #fff;
+//       text-decoration: none;
+//       padding:15px;
+//       &:hover{
+//         color: rgb(97, 218, 251);
+//       }
+//     }
+//   }
+// }
+
+// .active{
+//   background-color:red;
+// }
+
+// .menu-icon{
+//   float:right;
+//   display:none;
+// }
+
+// @media screen and (max-width:600px){
+//   .NavList li:not(:first-child):not(:last-child){
+//     display:none;
+//   }
+// }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.NavList {
+  overflow:hidden;
+  background-color: #000;
+  a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    &:hover {
+      color: #089;
+    }
+  }
+}
+
+.active {
+  background-color: #ddd;
+  color: white;
+}
+
+.NavList .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .NavList a{
+    display: none;
+  }
+  .NavList a.icon {
+    float: left;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .NavList.responsive {position: relative;}
+  .NavList.responsive .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .NavList.responsive a:not(:last-child){
+    position:relative;
+    top:52px;
+    float: none;
+    text-align: left;
+    display: block;
+  }
+  .NavList{
+    overflow-y:scroll;
+  }
+}
+li{
+  font-size:15px;
+}
