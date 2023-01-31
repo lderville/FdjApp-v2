@@ -503,4 +503,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+#migration
+/migrations
+
 # End of https://www.toptal.com/developers/gitignore/api/symfony,windows,react,reactnative,git,phpstorm
