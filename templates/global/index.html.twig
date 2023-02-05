@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GlobalController!{% endblock %}
+
+{% block body %}
+
+    {% include 'navbar/navbar.html.twig' %}
+<h1>you're logged</h1>
+
+
+
+    <a href="{{ path('app_logout') }}">déconnexion</a>
+
+    <div id="root"></div>
+{% endblock %}

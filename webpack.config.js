@@ -70,10 +70,12 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
     .enablePostCssLoader()
 
-    .addStyleEntry('styles','./assets/react/styles/styles.scss')
+    //.addStyleEntry('styles','./assets/react/styles/styles.scss')
 ;
 
 module.exports = Encore.getWebpackConfig();
+
+

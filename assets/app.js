@@ -10,5 +10,14 @@ import './styles/app.scss';
 
 // start the Stimulus application
 import './bootstrap';
+import './react/controllers/items'
 
-import './react/controllers/components/navbar'
+import './js/navbar'
+
+
+// ###--FONT AWESOME--###
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
+// ### ------------ ###

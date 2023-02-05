@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -18,18 +19,26 @@ class LoginController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('login/index.html.twig', [
             'last_username' => $lastUsername,
             'error'         => $error,
         ]);
     }
-
-    #[Route('/login', name: 'app_login')]
-    public function logout(): Response
+    #[Route('//logout', name: 'app_logout')]
+    public function logout(Security $security): Response
     {
-        return $this->redirectToRoute('app_login', [
-        ]);
+        // logout the user in on the current firewall
+        $response = $security->logout();
+
+        // you can also disable the csrf logout
+        $response = $security->logout(false);
+
+        // ... return $response (if set) or e.g. redirect to the homepage
+        return $this->redirectToRoute('app_home');
     }
+
+
+
 
 
 }
