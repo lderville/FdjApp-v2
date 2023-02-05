@@ -1,10 +1,39 @@
-{% extends 'base.html.twig' %}
+{% extends 'base_public.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
 
 {% block body %}
+
+    <div class="text-end mx-2 my-2">
+        <span id="login-icon" class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-placement="left"
+              data-bs-trigger="hover focus" data-bs-content="Sign In">
+            <a  href="#loginModal"  data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </a>
+        </span>
+    </div>
+
 <h1>accueil</h1>
-<div id="root"></div>
-    <a href="{{ path('app_login') }}">Connexion</a>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="text-bg-dark modal-body">
+                    <div class="text-end ">
+                        <button type="button" class="text-end btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    {% include 'login_form/login.html.twig' %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 
 {% endblock %}

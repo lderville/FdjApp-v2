@@ -22,6 +22,7 @@ Encore
      */
     .addEntry('app', './assets/app.js')
 
+
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
 
@@ -72,6 +73,7 @@ Encore
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
     .enablePostCssLoader()
+    .addEntry('public', './assets/public.js')
 
     //.addStyleEntry('styles','./assets/react/styles/styles.scss')
 ;

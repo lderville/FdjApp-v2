@@ -8,8 +8,15 @@
 // any CSS you import will output into a single css file (app.scss in this case)
 import './styles/app.scss';
 
+// or, specify which plugins you need:
+
 // start the Stimulus application
-import './bootstrap';
+import { Alert, Button, Toast, Collapse, Tooltip, Popover } from 'bootstrap'
+
+window.bootstrap = {
+    Alert, Button, Collapse, Tooltip, Popover
+}
+
 import './react/controllers/items'
 
 import './js/navbar'
