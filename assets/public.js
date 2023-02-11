@@ -13,6 +13,13 @@ import Alert from 'bootstrap/js/dist/alert'
 // or, specify which plugins you need:
 import { Tooltip, Toast, Popover } from 'bootstrap'
 
+
+// require jQuery normally
+const $ = require('jquery');
+
+// create global $ and jQuery variables
+global.$ = global.jQuery = $;
+
 // enable popover
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))

@@ -74,6 +74,7 @@ Encore
     .autoProvidejQuery()
     .enablePostCssLoader()
     .addEntry('public', './assets/public.js')
+    .addEntry('login_errors', './assets/login_errors.js')
 
     //.addStyleEntry('styles','./assets/react/styles/styles.scss')
 ;

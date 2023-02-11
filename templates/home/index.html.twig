@@ -8,12 +8,13 @@
         <span id="login-icon" class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-placement="left"
               data-bs-trigger="hover focus" data-bs-content="Sign In">
             <a  href="#loginModal"  data-bs-toggle="modal" data-bs-target="#loginModal">
-                <i class="fa-solid fa-right-to-bracket"></i>
+               <i class="fa-solid fa-user"></i>
             </a>
         </span>
     </div>
 
 <h1>accueil</h1>
+
     <!-- Button trigger modal -->
 
 
@@ -35,5 +36,10 @@
     </div>
 
 
+    {%  if error is not null %}
+        {{ encore_entry_script_tags('login_errors') }}
+    {% endif %}
 
 {% endblock %}
+
+

@@ -28,3 +28,9 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/brands'
 // ### ------------ ###
+
+// require jQuery normally
+const $ = require('jquery');
+
+// create global $ and jQuery variables
+global.$ = global.jQuery = $;
