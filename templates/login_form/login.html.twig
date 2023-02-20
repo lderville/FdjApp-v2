@@ -36,8 +36,8 @@
                         </div>
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                         <div class="form__group">
-                            <p class="form__text">Forgot your password? Reset it from
-                                <a href="#" class="form__link"> here</a>.
+                            <p class="form__text">Mot de passe oublié ? Réinitialisez-le
+                                <a href="{{ path('app_forgot_password_request') }}" class="form__link"> ici</a>.
                             </p>
                         </div>
                     </form>
