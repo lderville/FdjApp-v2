@@ -76,6 +76,15 @@ Encore
     .addEntry('public', './assets/public.js')
     .addEntry('login_errors', './assets/login_errors.js')
 
+    .setOutputPath('public/build/')
+
+    .copyFiles({
+             from: './assets/public/img',
+
+                 // optional target path, relative to the output dir
+                    to: 'images/[path][name].[ext]',
+    })
+
     //.addStyleEntry('styles','./assets/react/styles/styles.scss')
 ;
 

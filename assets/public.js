@@ -1,6 +1,7 @@
 import './public/styles/login.scss'
 import './public/styles/public.scss'
 import './bootstrap';
+import './public/img/sent-mail.webp'
 window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
 // ###--FONT AWESOME--###
 import '@fortawesome/fontawesome-free/js/fontawesome'
